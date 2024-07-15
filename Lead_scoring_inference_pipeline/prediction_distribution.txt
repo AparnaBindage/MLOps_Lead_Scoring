@@ -1,0 +1,3 @@
+Prediction at timestamp 1684064525 - 
+Percentage of 1s : 66.34769378603458 
+Percentage of 0s : 33.6523062139654 
