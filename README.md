@@ -27,14 +27,11 @@ The sales team must work with the data science team to figure out how to priorit
 
 ## Pipelines Implemented
 1. Development Pipeline
-    a. Rapid Experimentation is performed using pycaret and tracked using MLflow to build baseline model
+- Rapid Experimentation is performed using pycaret and tracked using MLflow to build baseline model
 2. Production Pipeline
-    a. Data Pipeline
-        - To fetch data from source and preprocess it for training and inference pipeline
-    b. Training Pipeline
-        - In case of data drift under a threshold, retrain the model with new preprocessed data
-    c. Inference Pipeline
-        - To predict the target variable for new data
+- Data Pipeline - To fetch data from source and preprocess it for training and inference pipeline
+- Training Pipeline - In case of data drift under a threshold, retrain the model with new preprocessed data
+- Inference Pipeline - To predict the target variable for new data
 
 ## Libraries Used
 - MLflow 
