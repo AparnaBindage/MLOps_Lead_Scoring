@@ -1,48 +1,51 @@
-# Project Name - Lending Club Case Study
-Lending Club company is the largest online loan marketplace, facilitating personal loans, business loans, and financing of medical procedures. In this project we need to identify risky loan applicants, thereby to cut down the amount of credit loss. Identification of such applicants using EDA is the aim of this case study.
-The goal is to build a machine learning model that is able to predict churning customers based on the features provided for their usage.
+# Project Name - Lead Scoring Case Study
+Code pro is an edtech startup that had a phenomenal seed A funding round. They used this funding to gain significant market share by campaigning aggressively. Due to aggressive campaigns the amount of junk leads increased.
+
+A lead is generated when any person visits Code pro’s website and enters their contact details on the platform. A junk lead is when the person sharing his contact details has no interest in the product/service.
+
+Having junk leads in the pipeline creates a lot of inefficiency in the sales process. Thus the goal of the Data Science team is to build a system that categorizes leads on their propensity to purchase Code pros course. This system will help remove the inefficiency caused by junk leads in the sales process.
 
 ## Table of Contents
 * [General Information](#general-information)
-* [Steps Performed](#steps-performed)
-* [Business Insights Derived](#Business-insights-derived)
-* [Recommendations](#recommendations)
+* [Pipelines Implemented](#pipelines-implemented)
 * [Libraries Used](#libraries-used)
-
+* [Acknowledgements](#acknowledgements)
 
 ## General Information
-In the telecommunication industry, customers tend to change operators if not provided with attractive schemes and offers. It is very important for any telecom operator to prevent the present customers from churning to other operators. As a data scientist, your task in this case study would be to build an ML model which can predict if the customer will churn or not in a particular month based on the past data.
+CodePro is an EdTech startup that used the money to increase its brand awareness. As the marketing spend increased, it got several leads from different sources. Although it had spent significant money on acquiring customers, it had to be profitable in the long run to sustain the business. The major cost that the company is incurring is the customer acquisition cost (CAC).
 
-In the telecom industry, customers are able to choose from multiple service providers and actively switch from one operator to another. In this highly competitive market, the telecommunications industry experiences an average of 15-25% annual churn rate. Given the fact that it costs 5-10 times more to acquire a new customer than to retain an existing one, customer retention has now become even more important than customer acquisition.
+At the initial stage, customer acquisition cost is required to be high in companies. But as their businesses grow, these companies start focussing on profitability. Many companies first offer their services for free or provide offers at the initial stages but later start charging customers for these services.
 
-For many incumbent operators, retaining high profitable customers is the number one business
-goal. To reduce customer churn, telecom companies need to predict which customers are at high risk of churn. In this project, you will analyze customer-level data of a leading telecom firm, build predictive models to identify customers at high risk of churn.
+Businesses want to reduce their customer acquisition costs in the long run. The high customer acquisition cost is due to following reasons:
 
+1. Improper targeting
+2. High competition
+3. Inefficient conversion
 
-## Steps Performed
-1. Data understanding
-2. Data cleaning 
-3. Outlier treatment
-4. Data Analysis - Univariate and Bivariate
-5. Model Building
+To address inefficient conversion, the sales team must undergo upskilling and prioritise the leads generated.
+The sales team must work with the data science team to figure out how to prioritise leads. The data science team must come up with lead scoring for all the leads generated.
 
-## Business Insights Derived
-1. Customers who recharge with amount 50 or less than 50 tend to churn more.
-2. There is more chance that the customer is likely to churn if the total incoming minutes of usage is lesser in the month of August than any other month
-3. Roaming outgoing minutes of usage is more for churn customers. Higher the minutes of usage, churn probability is higher
-4. Customers having decreasing local outgoing minutes of usage for operators T to other operator mobile M for August are more likely to churn.
-
-## Recommendations
-1. Customers who recharge with amount 50 or less than 50 tend to churn more. It is suggested to give some attractive offers on the recharge plan.
-2. Target the customers, whose minutes of usage of the total incoming calls are less in the action phase i.e. in August
-3. It is suggested that more attractive plans should be given to customers in roaming zone
-4. Target the customers whose local outgoing minutes of usage for operators T to other operator mobile M are less
+## Pipelines Implemented
+1. Development Pipeline
+    a. Rapid Experimentation is performed using pycaret and tracked using MLflow to build baseline model
+2. Production Pipeline
+    a. Data Pipeline
+        - To fetch data from source and preprocess it for training and inference pipeline
+    b. Training Pipeline
+        - In case of data drift under a threshold, retrain the model with new preprocessed data
+    c. Inference Pipeline
+        - To predict the target variable for new data
 
 ## Libraries Used
+- MLflow 
+- Airflow
+- PyCaret
+- Pandas Profiling
+- Python3
+- numpy
 - pandas
-- plotly 
 - matplotlib 
-- seaborn
+- Jupyter
 
-## Contact
-Created by AparnaBindage - feel free to contact me!
+## Acknowledgements
+Thankful to the professors of Upgrad & IIIT, Bangalore for providing the necessary knowledge & support to accomplish this project. 
